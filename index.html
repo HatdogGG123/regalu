@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <title>My gift</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bg-1">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+
+        <div class="bg-2">
+            <div class="circle3"></div>
+            <div class="circle2"></div>
+            <div class="circle1"></div>
+            <div class="circle4"></div>
+            <div class="circle2"></div>
+        </div>
+
+        <div class="bg-3">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+            <div class="circle4"></div>
+        </div>
+
+        <div class="floating-hearts">
+            <img src="fheart.png" class="heart beat">
+            <img src="fheart.png" class="heart beat">
+            <img src="fheart.png" class="heart beat">
+            <img src="fheart.png" class="heart beat">
+            <img src="fheart.png" class="heart beat">
+            <img src="fheart.png" class="heart beat">
+            <img src="fheart.png" class="heart beat">
+        </div>
+
+        <div class="giftBox" onclick="removeUpper()">
+            <div id="upper" class="upper upperToggle"></div>
+            <div class="lower"></div>
+
+            <div class="content">
+                <img id="balloon" src="balloons.png" alt="">
+            
+                <div id="letter" class="letter-image">
+                    <div class="animated-mail">
+                        <div class="back-fold"></div>
+                        <div class="letter">
+                            <div class="letter-context-body">
+                                <p><b>Dear, <br> Baby ko <br><br></b> Happy <br>anniversary <br> baby ko!!!, <br>naka 3 years <br>na tayo🥰 tatagal <br>pa tayo ng 100x<br> pa dito baby. <br>Grabe yung mga nangyare <br>sa loob ng 3 years<br> natin, alam kong matagal pa toh at magiging mahirap<br> pa yung mga<br> susunod na <br>taon pero hintay<br> lang makakagalaw <br>din tayo ng <br>ayos and <br>pinapromise ko sayo<br> na maghihintay ako para sa moment na yon baby ko🥰, happy 3rd anniversary ulit baby ko! Pinag effortan ko toh kagabi😌😌😌 whehehehehee ang hirap gawin nito sana magustuhan mo toh sorry den kung di kita mapansin kahapon kakalaro coz its part e hehehe🥰🥰🥰🥰🥰 <br><br><br><br></p>
+                            </div>
+                        </div>
+                        <div class="top-fold"></div>
+                        <div class="body"></div>
+                        <div class="left-fold"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p id="text">Happy 3rd <br> Anniversary!</p>
+
+    </div>
+
+    <script>
+        const upper = document.getElementById("upper")
+        const balloon = document.getElementById("balloon")
+        const letter = document.getElementById("letter")
+        const text = document.getElementById("text")
+
+        function removeUpper(){
+            upper.classList.add("upperRemove")
+
+            upper.classList.remove("upperToggle")
+            showBalloon()
+            showLetter()
+
+            text.style.display = "none"
+        }
+
+        function showBalloon() {
+            balloon.classList.add("balloonFloat")
+            balloon.style.display = "block"
+        }
+        
+        function showLetter() {
+            letter.classList.add("showLetter")
+        }
+    </script>
+</body>
+</html>

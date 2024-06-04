@@ -1,0 +1,448 @@
+:root {
+    --color-1: #FFD0D0;
+    --color-2: #E1ACAC;
+    --color-3: #CA8787;
+    --color-4: #A87676;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Parisienne';
+}
+
+body {
+    background-color: var(--color-1);
+}
+
+@media screen and (max-width: 414px) {
+    .container {
+        width: 100%;
+        height: 100dvh;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container .bg-1 {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        z-index: 4;
+        top: 10px;
+    }
+    .container .bg-1 .circle1, .bg-2 .circle1, .bg-3 .circle1  {
+        height: 200px;
+        width: 250px;
+        border-radius: 50%;
+        position: absolute;
+        top: -100px;
+        left: -100px;
+    }
+    .container .bg-1 .circle2, .bg-2 .circle2, .bg-3 .circle2  {
+        height: 200px;
+        width: 250px;
+        border-radius: 50%;
+        position: absolute;
+        top: -130px;
+        left: 50px;
+    }
+    .container .bg-1 .circle3, .bg-2 .circle3, .bg-3 .circle3  {
+        height: 100px;
+        width: 150px;
+        border-radius: 50%;
+        position: absolute;
+        top: -50px;
+        left: 200px;
+    }
+    .container .bg-1 .circle4, .bg-2 .circle4, .bg-3 .circle4  {
+        height: 180px;
+        width: 250px;
+        border-radius: 50%;
+        position: absolute;
+        top: -100px;
+        left: 250px;
+    }
+    .container .bg-1 .circle1 {
+        background-color: white;
+    }
+    .container .bg-1 .circle2 {
+        background-color: white;
+    }
+    .container .bg-1 .circle3 {
+        background-color: white;
+    }
+    .container .bg-1 .circle4 {
+        background-color: white;
+    }
+
+    .container .bg-2 {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        z-index: 3;
+        top: 20px;
+        left: -20px;
+    } 
+    .container .bg-2 .circle1 {
+        background-color: rgba(245, 245, 245, 0.836);
+    }
+    .container .bg-2 .circle2 {
+        background-color: rgba(245, 245, 245, 0.836);
+    }
+    .container .bg-2 .circle3 {
+        background-color: rgba(245, 245, 245, 0.836);
+    }
+    .container .bg-2 .circle4 {
+        background-color: rgba(245, 245, 245, 0.836);
+    }
+    
+    .container .bg-3 {
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        z-index: 2;
+        top: 40px;
+        left: 0;
+    } 
+    .container .bg-3 .circle1 {
+        background-color: rgba(245, 245, 245, 0.603);
+    }
+    .container .bg-3 .circle2 {
+        background-color: rgba(245, 245, 245, 0.603);
+    }
+    .container .bg-3 .circle3 {
+        background-color: rgba(245, 245, 245, 0.603);
+    }
+    .container .bg-3 .circle4 {
+        background-color: rgba(245, 245, 245, 0.603);
+    }
+
+    .container .floating-hearts {
+        width: 90%;
+        height: 100%;
+        position: relative;
+        z-index: 0;
+        bottom: -100px;
+        display: none;
+    }
+    .container .floating-hearts img:nth-child(1) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 50px;
+        animation: float 10s ease-out infinite;
+    }
+    .container .floating-hearts img:nth-child(2) {
+        position: absolute;
+        bottom: 0;
+        left: 50px;
+        height: 50px;
+        animation: float 7s ease-out infinite;
+        animation-delay: 3s;
+    }
+    .container .floating-hearts img:nth-child(3) {
+        position: absolute;
+        bottom: 0;
+        left: 100px;
+        height: 50px;
+        animation: float 13s ease-out infinite;
+        animation-delay: 1.5s;
+    }
+    .container .floating-hearts img:nth-child(4) {
+        position: absolute;
+        bottom: 0;
+        left: 150px;
+        height: 50px;
+        animation: float 7s ease-out infinite;
+        animation-delay: 1s;
+    }
+    .container .floating-hearts img:nth-child(5) {
+        position: absolute;
+        bottom: 0;
+        left: 200px;
+        height: 50px;
+        animation: float 10s ease-out infinite;
+        animation-delay: 3s;
+    }
+    .container .floating-hearts img:nth-child(6) {
+        position: absolute;
+        bottom: 0;
+        left: 250px;
+        height: 50px;
+        animation: float 6s ease-out infinite;
+        animation-delay: 6s;
+    }
+    .container .floating-hearts img:nth-child(7) {
+        position: absolute;
+        bottom: 0;
+        left: 300px;
+        height: 50px;
+        animation: float 14s ease-out infinite;
+        animation-delay: 4s;
+    }
+
+    .container p {
+        position: absolute;
+        z-index: 10;
+        text-align: center;
+        font-size: 50px;
+        top: 150px;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(-120vh);
+        }
+        100% {
+            transform: translateY(-0);
+        }
+    }
+
+    .container .giftBox {
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0.85) translateY(10px);
+    }
+    .upperToggle {
+        animation: toggle 3s infinite;
+    }
+    .upperRemove {
+        transform: rotate(-80deg);
+        left: -100px;
+        top: 400px;
+        transition: ease-in;
+        transition-duration: 1s;
+    }
+    .container .giftBox .upper {
+        width: 230px;
+        height: 50px;
+        background-color: var(--color-3);
+        top: 450px;
+        position: relative;
+        z-index: 10;
+        transition: ease-out;
+        transition-duration: 1s;
+    }
+    .container .giftBox .upper::before {
+        content: "";
+        position: absolute;
+        background-color: var(--color-2);
+        height: 100px;
+        width: 50px;
+        transform: rotate(90deg);
+        top: -75px;
+        left: 40%;
+        clip-path: polygon(1% 0%, 100% 1%, 100% 99%, 0% 99%, 60% 52%);
+        transition: ease-out;
+        transition-duration: 1s;
+    }
+    .container .giftBox .upper::after {
+        width: 100%;
+        height: 5px;
+        content: "";
+        position: absolute;
+        background-color: var(--color-4);
+        bottom: 0;
+        transition: ease-out;
+        transition-duration: 1s;
+    }
+    .container .giftBox .lower {
+        width: 200px;
+        height: 190px;
+        background-color: var(--color-3);
+        position: relative;
+        top: 450px;
+        z-index: 2;
+    }
+    .container .giftBox .lower::before {
+        content: "";
+        position: absolute;
+        width: 10%;
+        height: 100%;
+        background-color: var(--color-2);
+        left: 45%;
+        z-index: 1;
+    }
+    .container .giftBox .lower::after {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 5px;
+        background-color: rgba(128, 128, 128, 0.301);
+        bottom: -10px;
+        left: -20px;
+        z-index: 0;
+        border-radius: 50% 100%;
+    }
+    @keyframes toggle {
+        0% {
+            transform: rotate(-10deg);
+        }
+        25% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(-10deg);
+        }
+        75% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-10deg);
+        }
+    }
+
+    .container .giftBox .content #balloon {
+        height: 400px;
+        position: absolute;
+        left: -35px;
+        top: 100px;
+        display: none;
+        transition-duration: 1s;
+        display: none;
+        z-index: 1;
+    }
+    .balloonFloat {
+        animation: float 5s infinite;
+    }
+    @keyframes float {
+        0% {
+            transform: translateY(-10px);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .letter-image {
+        position: absolute;
+        top: 500px;
+        left: 50%;
+        width: 190px;
+        height: 200px;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        z-index: 100;
+        visibility: hidden;
+      }
+      .animated-mail {
+        position: absolute;
+        height: 150px;
+        width: 200px;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        transition: 0.4s;
+      }
+      .animated-mail .body {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 100px 200px;
+        border-color: transparent transparent #e95f55 transparent;
+        z-index: 2;
+      }
+      .animated-mail .top-fold {
+        position: absolute;
+        top: 50px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 50px 100px 0 100px;
+        -webkit-transform-origin: 50% 0%;
+        -webkit-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+        -moz-transform-origin: 50% 0%;
+        -moz-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+        transform-origin: 50% 0%;
+        transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+        border-color: #cf4a43 transparent transparent transparent;
+        z-index: 2;
+      }
+      .animated-mail .back-fold {
+        position: absolute;
+        bottom: 0;
+        width: 200px;
+        height: 100px;
+        background: #cf4a43;
+        z-index: 0;
+      }
+      .animated-mail .left-fold {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 50px 0 50px 100px;
+        border-color: transparent transparent transparent #e15349;
+        z-index: 2;
+      }
+      .animated-mail .letter {
+        left: 20px;
+        bottom: 0px;
+        position: absolute;
+        width: 160px;
+        height: fit-content;
+        background: white;
+        padding: 2px;
+        box-sizing: border-box;
+        z-index: 1;
+        overflow-y: scroll;
+        -webkit-transition: 0.4s 0.2s;
+        -moz-transition: 0.4s 0.2s;
+        transition: 0.4s 0.2s;
+        text-align: center;
+      }
+      .animated-mail .letter .letter-context-body {
+        height: 100%;
+        width: fit-content;
+        color: black;
+        text-align: center;
+      }
+      .animated-mail .letter .letter-context-body p {
+        margin-bottom: 100px;
+        font-size: 20px;
+        width: 100%;
+    }
+      .letter-image:hover .animated-mail {
+        transform: translateY(50px);
+        -webkit-transform: translateY(50px);
+        -moz-transform: translateY(50px);
+      }
+      .letter-image:hover .animated-mail .top-fold {
+        transition: transform 0.4s, z-index 0.2s;
+        transform: rotateX(180deg);
+        -webkit-transition: transform 0.4s, z-index 0.2s;
+        -webkit-transform: rotateX(180deg);
+        -moz-transition: transform 0.4s, z-index 0.2s;
+        -moz-transform: rotateX(180deg);
+        z-index: 0;
+      }
+      .letter-image:hover .animated-mail .letter {
+        height: 280px;
+        width: 160px;
+        color: #000;
+        overflow-wrap: normal;
+    }
+      .letter-image:hover .shadow {
+        width: 250px;
+      }
+
+      .showLetter {
+        visibility: visible;
+        top: 350px;
+        left: 10px;
+        animation: float 5s infinite;
+    }
+}
